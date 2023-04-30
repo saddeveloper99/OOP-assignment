@@ -17,7 +17,7 @@ class Car():
 
 
 car1 = Car("Shopping Cart", "Red")
-car2 = Car("Rickshaw")
+# car2 = Car("Rickshaw")
 
 car1.accelerate(50)
 print(car1.speed)
