@@ -100,7 +100,7 @@ class Customer(Person):
     def action(self, order_item):
         money = self.inventory.get_item("money").quantity
         if money < order_item.price:
-            return print("소지금 부족")
+            raise ValueError("소지금 부족")
         self.order = order_item
         print(f"{order_item.name} 한 잔 주문받았습니다~")
 
@@ -176,4 +176,3 @@ print("--바리스타 정보--")
 barista.info()
 print("")
 print(f"바리스타 수입 : {barista.get_income()}")
-print(customer.order)
